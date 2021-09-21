@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+/* common */
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+.sp-menu:hover,
+.overlay #close:hover {
+  color: orange;
+  transition: color .5s;
+}
+
+
+/* smartphone screen */
+/* @media (min-width: 1036px) {
+  .contents {
+    
+  }
+} */
+
+/* header */
+header {
+  height: 767px;
+  background: center/cover url(../img/S__4112461.jpg);
+  font-family:"Book Antiqua",serif;
+  color: white;
+  user-select: none;
+}
+
+header h1 {
+  margin: 0 ;
+  padding-left: 16px;
+  padding-top: 16px;
+  font-size: 48px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header a {
+  color: white;
+}
+
+header .sp-menu {
+  position: absolute;
+  top: 16px; right: 16px;
+}
+
+header .sp-menu #open {
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+header .contents {
+  list-style: none;
+  display: flex;
+  padding-right: 16px;
+  font-size: 24px;
+}
+
+header .contents li + li {
+  margin-left: 16px;
+}
+
+header .phrase {
+  list-style: none;
+  position: absolute;
+  /* top: 400px; left: 800px; */
+  top: 50%; right: 5%;
+  font-family: "Century",serif;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; bottom: 0; right: 0; left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+.overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
+.overlay.show li:nth-child(5) {
+  transition-delay: .5s;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay a {
+  color: black;
+}
+.overlay a:hover {
+  color: orange;
+}
+
+.pc-menu {
+  display: none;
+}
+
+#mainPhrase {
+  font-size: 32px;
+}
+
+#subPhrase {
+  font-size: 24px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .pc-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .sp-menu {
+    display: none;
+  }
+
+}
+
+@media (min-width: 900px) {
+  #mainPhrase {
+    font-size: 48px;
+  }
+
+  #subPhrase {
+    font-size: 32px;
+  }
+
+  header .phrase {
+    top: 55%; right: 10%;
+  }
+}
+
+
+/* main */
+
+/* footer */
